@@ -24,10 +24,16 @@ import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 import {PageNotFoundComponent} from './parts/page-not-found/page-not-found.component';
 import {WelcomeComponent} from './parts/welcome/welcome.component';
+import { AboutComponent } from './about/about.component';
+import { HelpComponent } from './help/help.component';
+import { LoginComponent } from './login/login.component';
 
 const appRoutes: Routes = [
+  {path: 'login', component: LoginComponent},
   {path: 'welcome', component: WelcomeComponent},
-  {path: '', component: WelcomeComponent},
+  {path: 'about', component: AboutComponent},
+  {path: 'help', component: HelpComponent},
+  {path: '', redirectTo: '/login',pathMatch: 'full'},
   {path: '**', component: PageNotFoundComponent}
 ];
 

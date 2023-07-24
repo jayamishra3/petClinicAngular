@@ -1,0 +1,44 @@
+<!-- Html table using bootstrap with following fields
+ 
+    petName: string;
+  
+    vetName: string;
+    treatmentDate: string;
+   
+    specialtyName: string;
+-->
+
+<div class="container-fluid">
+    <div class="container xd-container">
+        <!-- Add a row to display message if PetAllocations is  empty -->
+        <div class="row">
+            <strong *ngIf="!petAllocations">No Pet Allocation found </strong>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <h1>Pet Allocation List</h1>
+                <table class="table table-striped table-bordered table-hover">
+                    <thead>
+                        <tr>
+                            <th>Pet Name</th>
+                            <th>Vet Name</th>
+                            <th>Treatment Date</th>
+                            <th>Specialty Name</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let petAllocation of petAllocations">
+                            <td>{{petAllocation.petName}}</td>
+                            <td>{{petAllocation.vetName}}</td>
+                            <td>{{petAllocation.treatmentDate}}</td>
+                            <td>{{petAllocation.specialtyName}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+</div>

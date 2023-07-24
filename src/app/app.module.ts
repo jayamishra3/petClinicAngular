@@ -35,11 +35,18 @@ import {PartsModule} from './parts/parts.module';
 import {SpecialtiesModule} from './specialties/specialties.module';
 import {HttpErrorHandler} from './error.service';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { AboutComponent } from './about/about.component';
+import { HelpComponent } from './help/help.component';
+import { LoginComponent } from './login/login.component';
+import { PetallocationModule } from './petallocation/petallocation.module';
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    AboutComponent,
+    HelpComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
@@ -52,6 +59,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     VetsModule,
     SpecialtiesModule,
     PartsModule,
+    PetallocationModule,
     BrowserAnimationsModule,
     AppRoutingModule
   ],
